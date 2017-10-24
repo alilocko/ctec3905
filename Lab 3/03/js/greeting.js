@@ -15,15 +15,15 @@
     declare all the variables using 'let'. These get a reference
     to the HTML elements we want by finding their ID
   */
-  let myName1 = document.getElementById("my-name1"); 
-  let myName2 = document.getElementById("my-name2"); 
+  let myHeaderName = document.getElementById("my-headername"); 
+  let myName = document.getElementById("my-name"); 
   let userName = document.getElementById("user-name"); 
   let getName = document.getElementById("get-name");
   
   // changes the 'innerHTML' (text) of the element
   function PerformGreeting() {
-    myName1.innerHTML = userName.value;
-    myName2.innerHTML = userName.value;
+    myHeaderName.innerHTML = userName.value;
+    myName.innerHTML = userName.value;
      /*
     Without setting the variables first, the above line would be really long:
       document.getElementById("my-name").innerHTML = document.getElementById("user-name").value;
@@ -48,8 +48,10 @@
   /*
     Uncomment the line below - see what happens when you click
     in the grey area outside the input "submit" button. Why?
+    
+    The Form 'get-name' is an onlclick event
   */
   
-  // getName.addEventListener("click", PerformGreeting);
+  //getName.addEventListener("click", PerformGreeting);
 
 }());
